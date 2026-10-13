@@ -1,0 +1,314 @@
+/* App Layout & Component Styles - Bluish Purple & White Palette */
+
+/* Main Container */
+.portfolio-wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 44px 20px 64px;
+  background: linear-gradient(180deg, #f5f3ff 0%, #ffffff 420px, #fdfcff 100%);
+}
+
+.portfolio-container {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* ==========================================================================
+   Header Component Styles
+   ========================================================================== */
+.portfolio-header {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 44px 36px;
+  text-align: center;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--purple-border);
+  border-top-width: 5px; /* Theme color applied via inline style */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-name {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  /* themeColor applied via inline style */
+}
+
+.header-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   General Section Styles
+   ========================================================================== */
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.section-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--purple-border) 0%, transparent 100%);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   About Component Styles
+   ========================================================================== */
+.about-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  border: 1px solid var(--purple-border);
+  border-left: 4px solid var(--primary-purple);
+  box-shadow: var(--shadow-subtle);
+}
+
+.about-bio {
+  font-size: 1.02rem;
+  color: var(--text-body);
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   Skills Component Styles
+   ========================================================================== */
+.skills-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.skill-category-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--purple-border);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-category-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-purple-light);
+  box-shadow: var(--shadow-hover);
+}
+
+.skill-category-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-category-title::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--primary-purple);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-badge {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--primary-purple-dark);
+  background-color: var(--purple-tint);
+  border: 1px solid var(--purple-border);
+  padding: 5px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-badge:hover {
+  border-color: var(--primary-purple-light);
+  background-color: #ede9fe;
+}
+
+/* ==========================================================================
+   Projects Component Styles
+   ========================================================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--purple-border);
+  border-radius: var(--radius-md);
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--shadow-subtle);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-purple-light);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.35;
+}
+
+.project-description {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--purple-border);
+}
+
+.tag-badge {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--primary-purple-dark);
+  background-color: var(--purple-tint);
+  padding: 4px 9px;
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   Footer Component Styles
+   ========================================================================== */
+.portfolio-footer {
+  background-color: var(--bg-card);
+  border: 1px solid var(--purple-border);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-subtle);
+  text-align: center;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.footer-contact {
+  font-size: 0.95rem;
+  color: var(--text-body);
+}
+
+.footer-contact-label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer-email-link {
+  color: var(--primary-purple);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.footer-email-link:hover {
+  color: var(--primary-purple-dark);
+  text-decoration: underline;
+}
+
+.copyright-text {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 768px) {
+  .portfolio-wrapper {
+    padding: 24px 14px 44px;
+  }
+
+  .portfolio-container {
+    gap: 28px;
+  }
+
+  .portfolio-header {
+    padding: 32px 20px;
+  }
+
+  .header-name {
+    font-size: 2rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .skills-categories-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-card {
+    padding: 20px;
+  }
+}
